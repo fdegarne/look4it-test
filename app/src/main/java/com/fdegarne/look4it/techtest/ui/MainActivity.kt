@@ -1,4 +1,4 @@
-package com.fdegarne.look4it.techtest
+package com.fdegarne.look4it.techtest.ui
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
