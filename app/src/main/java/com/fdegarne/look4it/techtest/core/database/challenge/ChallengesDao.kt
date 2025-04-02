@@ -18,6 +18,9 @@ interface ChallengesDao {
     @Insert
     suspend fun insertChallengeEntity(challengeEntity: ChallengeEntity): Long
 
+    @Insert
+    fun insertAllChallengeEntities(challenges: List<ChallengeEntity>)
+
     @Delete
     suspend fun deleteChallengeEntity(challengeEntity: ChallengeEntity)
 }

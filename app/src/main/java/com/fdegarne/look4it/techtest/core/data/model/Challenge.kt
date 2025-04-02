@@ -2,10 +2,10 @@ package com.fdegarne.look4it.techtest.core.data.model
 
 import java.util.Date
 
-data class Challenge (
+data class Challenge(
     val id: Long = 0,
-    val date: Date,
+    val date: Date?,
+    val imageId: Int? = null,
     val imagePath: String? = null,
-    val locationId: Long,
-    val locationTitle: String
+    val locationId: Long
 )

@@ -33,16 +33,16 @@ class RoomChallengesDataSource @Inject constructor(
 
 fun ChallengeEntity.toChallenge() = Challenge(
     id = id,
+    imageId = imageId,
     imagePath = imagePath,
     date = date,
-    locationTitle = locationTitle,
     locationId = locationId
 )
 
 fun Challenge.toEntity() = ChallengeEntity(
     id = id,
+    imageId = imageId,
     imagePath = imagePath,
     date = date,
-    locationTitle = locationTitle,
     locationId = locationId
 )

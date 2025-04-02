@@ -5,11 +5,11 @@ import androidx.room.PrimaryKey
 import java.util.Date
 
 @Entity(tableName = "challenges")
-data class ChallengeEntity (
+data class ChallengeEntity(
     @PrimaryKey(autoGenerate = true)
     val id: Long = 0,
-    val date: Date,
+    val date: Date?,
+    val imageId: Int? = null,
     val imagePath: String? = null,
-    val locationId: Long,
-    val locationTitle: String
+    val locationId: Long
 )
