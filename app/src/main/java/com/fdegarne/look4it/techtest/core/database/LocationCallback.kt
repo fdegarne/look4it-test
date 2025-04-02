@@ -20,7 +20,7 @@ class LocationCallback(
             populateDatabaseWithLocations()
         }
     }
-    
+
     private fun populateDatabaseWithLocations() {
         val locations = listOf(
             LocationEntity(
