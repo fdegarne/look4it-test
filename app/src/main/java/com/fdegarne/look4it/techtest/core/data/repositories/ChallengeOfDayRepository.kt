@@ -5,7 +5,6 @@ import com.fdegarne.look4it.techtest.core.database.challengeofday.ChallengeOfDay
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
 import java.time.LocalDate
-import java.util.Date
 import javax.inject.Inject
 import javax.inject.Singleton
 

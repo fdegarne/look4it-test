@@ -9,6 +9,7 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
+import androidx.compose.material3.Card
 import androidx.compose.material3.Icon
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -34,70 +35,72 @@ fun FeedItem(
     location: Location?
 ) {
     val formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd 'à' HH:mm")
-    Box(
-        modifier = Modifier
-            .fillMaxWidth().aspectRatio(1f)
-    ) {
-        challenge.imageId?.let {
-            Image(
-                modifier = Modifier.fillMaxSize(),
-                painter = painterResource(it),
-                contentScale = ContentScale.Crop,
-                contentDescription = ""
-            )
-        }
-
-        Box (
+    Card {
+        Box(
             modifier = Modifier
-                .fillMaxWidth()
-                .height(50.dp)
-                .align(Alignment.TopCenter)
-                .background(color = Color.Black.copy(alpha = 0.6f))
+                .fillMaxWidth().aspectRatio(1f)
         ) {
-            Text(
-                modifier = Modifier
-                    .align(Alignment.CenterStart)
-                    .padding(start = 20.dp),
-                text = "${challenge.date?.format(formatter)}",
-                style = TextStyle(
-                    color = Color.White,
-                    fontWeight = FontWeight.Bold
+            challenge.imageId?.let {
+                Image(
+                    modifier = Modifier.fillMaxSize(),
+                    painter = painterResource(it),
+                    contentScale = ContentScale.Crop,
+                    contentDescription = ""
                 )
-            )
-            Text(
+            }
+
+            Box(
                 modifier = Modifier
-                    .align(Alignment.CenterEnd)
-                    .padding(end = 20.dp),
-                text = "#${location?.label}",
-                style = TextStyle(
-                    color = Color.White,
-                    fontWeight = FontWeight.Bold
+                    .fillMaxWidth()
+                    .height(50.dp)
+                    .align(Alignment.TopCenter)
+                    .background(color = Color.Black.copy(alpha = 0.6f))
+            ) {
+                Text(
+                    modifier = Modifier
+                        .align(Alignment.CenterStart)
+                        .padding(start = 20.dp),
+                    text = "${challenge.date?.format(formatter)}",
+                    style = TextStyle(
+                        color = Color.White,
+                        fontWeight = FontWeight.Bold
+                    )
                 )
-            )
-        }
+                Text(
+                    modifier = Modifier
+                        .align(Alignment.CenterEnd)
+                        .padding(end = 20.dp),
+                    text = "#${location?.label}",
+                    style = TextStyle(
+                        color = Color.White,
+                        fontWeight = FontWeight.Bold
+                    )
+                )
+            }
 
-        Row (
-            modifier = Modifier
-                .fillMaxWidth()
-                .height(50.dp)
-                .align(Alignment.BottomCenter)
-                .background(color = Color.Black.copy(alpha = 0.6f))
-        ) {
-            Icon(
-                modifier = Modifier.padding(10.dp)
-                    .weight(1f),
-                painter = painterResource(R.drawable.ic_comment),
-                tint = Color.White,
-                contentDescription = null
-            )
+            Row (
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .height(50.dp)
+                    .align(Alignment.BottomCenter)
+                    .background(color = Color.Black.copy(alpha = 0.6f))
+            ) {
+                Icon(
+                    modifier = Modifier.padding(10.dp)
+                        .weight(1f),
+                    painter = painterResource(R.drawable.ic_comment),
+                    tint = Color.White,
+                    contentDescription = null
+                )
 
-            Icon(
-                modifier = Modifier.padding(10.dp)
-                    .weight(1f),
-                painter = painterResource(R.drawable.ic_like),
-                tint = Color.White,
-                contentDescription = null
-            )
+                Icon(
+                    modifier = Modifier.padding(10.dp)
+                        .weight(1f),
+                    painter = painterResource(R.drawable.ic_like),
+                    tint = Color.White,
+                    contentDescription = null
+                )
+            }
         }
     }
 }
