@@ -15,7 +15,6 @@ import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.res.vectorResource
 import androidx.compose.ui.unit.dp
-import androidx.navigation.NavDestination
 import com.fdegarne.look4it.techtest.core.ui.Look4itNavigationBarItem
 import com.fdegarne.look4it.techtest.ui.home.TopLevelDestination
 

@@ -7,11 +7,8 @@ import androidx.compose.runtime.remember
 import androidx.navigation.NavDestination
 import androidx.navigation.NavGraph.Companion.findStartDestination
 import androidx.navigation.NavHostController
-import androidx.navigation.compose.currentBackStackEntryAsState
 import androidx.navigation.compose.rememberNavController
 import androidx.navigation.navOptions
-import com.fdegarne.look4it.techtest.ui.home.ChallengeGraphRoute
-import com.fdegarne.look4it.techtest.ui.home.FeedGraphRoute
 import com.fdegarne.look4it.techtest.ui.home.TopLevelDestination
 import com.fdegarne.look4it.techtest.ui.home.navigateToChallengeOfDay
 import com.fdegarne.look4it.techtest.ui.home.navigateToFeed
