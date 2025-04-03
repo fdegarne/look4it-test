@@ -1,3 +1,12 @@
 <resources>
     <string name="app_name">Look4it</string>
+
+    <string name="tab_title_feed">Challenges</string>
+    <string name="tab_title_challenge_day">Challenge of the day</string>
+
+    <string name="take_picture">Take the picture</string>
+    <string name="look_for_it">Look4… %1$s !</string>
+
+    <string name="no_more_challenge_today">No more challenge for today !</string>
+    <string name="no_challenge_in_feed">No challenge in your feed !\nMaybe your\'re new ?</string>
 </resources>
