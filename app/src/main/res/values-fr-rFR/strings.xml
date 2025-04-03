@@ -3,4 +3,10 @@
 
     <string name="tab_title_feed">Défis</string>
     <string name="tab_title_challenge_day">Défi du jour</string>
+
+    <string name="take_picture">Prendre la photo</string>
+    <string name="look_for_it">Look4… %1$s !</string>
+
+    <string name="no_more_challenge_today">Plus de challenge pour aujourd\'hui !</string>
+    <string name="no_challenge_in_feed">Pas de challenge dans votre fil d\'actualité !\nVous êtes peut-être nouveau ?</string>
 </resources>

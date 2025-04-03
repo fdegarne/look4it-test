@@ -20,12 +20,12 @@ fun Look4itNavHost(
     ) {
         feedScreen(
             navController = navController,
-            onBackClick = navController::popBackStack
+            onBackClick = { }
         )
 
         challengeOfDayScreen(
             navController = navController,
-            onBackClick = navController::popBackStack
+            onBackClick = { }
         )
     }
 }

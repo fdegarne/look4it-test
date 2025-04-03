@@ -4,8 +4,8 @@ import androidx.navigation.NavController
 import androidx.navigation.NavGraphBuilder
 import androidx.navigation.NavOptions
 import androidx.navigation.compose.composable
-import com.fdegarne.look4it.techtest.ui.challengeofday.ChallengeOfDayScreen
-import com.fdegarne.look4it.techtest.ui.feed.FeedScreen
+import com.fdegarne.look4it.techtest.ui.challengeofday.ChallengeOfDayRoute
+import com.fdegarne.look4it.techtest.ui.feed.FeedRoute
 import kotlinx.serialization.Serializable
 
 @Serializable object FeedGraphRoute
@@ -20,7 +20,7 @@ fun NavGraphBuilder.feedScreen(
     onBackClick: () -> Unit,
 ) {
     composable<FeedGraphRoute> {
-        FeedScreen()
+        FeedRoute()
     }
 }
 
@@ -33,6 +33,6 @@ fun NavGraphBuilder.challengeOfDayScreen(
     onBackClick: () -> Unit,
 ) {
     composable<ChallengeGraphRoute> {
-        ChallengeOfDayScreen()
+        ChallengeOfDayRoute()
     }
 }

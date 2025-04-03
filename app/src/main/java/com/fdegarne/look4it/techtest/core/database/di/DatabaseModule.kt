@@ -30,5 +30,6 @@ object DatabaseModule {
         "look4it_db"
     ).addCallback(LocationCallback(locationProvider))
         .addCallback(ChallengeCallback(challengesProvider))
+        .allowMainThreadQueries()
         .build()
 }

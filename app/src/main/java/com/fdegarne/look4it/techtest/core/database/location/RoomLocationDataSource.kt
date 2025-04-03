@@ -22,10 +22,12 @@ class RoomLocationDataSource @Inject constructor(
 
 fun LocationEntity.toLocation() = Location(
     id = id,
-    title = title
+    title = title,
+    label = label
 )
 
 fun Location.toEntity() = LocationEntity(
     id = id,
-    title = title
+    title = title,
+    label = label
 )

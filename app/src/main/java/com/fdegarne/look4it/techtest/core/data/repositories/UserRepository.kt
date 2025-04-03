@@ -12,7 +12,7 @@ import javax.inject.Singleton
 class UserRepository @Inject constructor(
     private val userDataSource: UserDataSource
 ) {
-    fun getUser(id: Long): Flow<User> = userDataSource.getUser(id)
+    fun getUser(id: Long): Flow<User?> = userDataSource.getUser(id)
 
     suspend fun createUser(user: User): Long = withContext(Dispatchers.IO) {
         userDataSource.createUser(user)

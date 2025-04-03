@@ -4,6 +4,7 @@ import com.fdegarne.look4it.techtest.core.data.model.ChallengeOfDay
 import com.fdegarne.look4it.techtest.core.database.challengeofday.ChallengeOfDayDataSource
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
+import java.time.LocalDate
 import java.util.Date
 import javax.inject.Inject
 import javax.inject.Singleton
@@ -12,8 +13,11 @@ import javax.inject.Singleton
 class ChallengeOfDayRepository @Inject constructor(
     private val challengeOfDayDataSource: ChallengeOfDayDataSource
 ) {
-    fun getChallengeOfDay(date: Date, consumed: Boolean) =
+    fun getChallengeOfDay(date: LocalDate, consumed: Boolean) =
         challengeOfDayDataSource.getChallengeOfDay(date, consumed)
+
+    fun countChallengeOfDay(date: LocalDate, consumed: Boolean) =
+        challengeOfDayDataSource.countChallengeOfDay(date, consumed)
 
     suspend fun createChallengeOfDay(challengeOfDay: ChallengeOfDay): Long = withContext(Dispatchers.IO) {
         challengeOfDayDataSource.createChallengeOfDay(challengeOfDay)

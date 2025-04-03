@@ -11,7 +11,7 @@ import javax.inject.Singleton
 class RoomUserDataSource @Inject constructor(
     private val userDao: UserDao
 ) : UserDataSource {
-    override fun getUser(id: Long): Flow<User> = userDao.getUserById(id).map { it.toUser() }
+    override fun getUser(id: Long): Flow<User?> = userDao.getUserById(id).map { it?.toUser() }
 
     override suspend fun createUser(user: User): Long = userDao.insertUser(user.toEntity())
 

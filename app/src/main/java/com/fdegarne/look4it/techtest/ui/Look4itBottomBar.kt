@@ -16,7 +16,6 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.res.vectorResource
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavDestination
-import androidx.navigation.NavDestination.Companion.hierarchy
 import com.fdegarne.look4it.techtest.core.ui.Look4itNavigationBarItem
 import com.fdegarne.look4it.techtest.ui.home.TopLevelDestination
 
@@ -24,8 +23,7 @@ import com.fdegarne.look4it.techtest.ui.home.TopLevelDestination
 fun Look4itBottomBar(
     modifier: Modifier = Modifier,
     destinations: List<TopLevelDestination>,
-    onNavigateToDestination: (TopLevelDestination) -> Unit,
-    currentDestination: NavDestination?,
+    onNavigateToDestination: (TopLevelDestination) -> Unit
 ) {
     var selectedItem by rememberSaveable { mutableIntStateOf(0) }
     NavigationBar(

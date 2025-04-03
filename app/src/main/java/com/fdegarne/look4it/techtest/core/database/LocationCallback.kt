@@ -25,35 +25,43 @@ class LocationCallback(
         val locations = listOf(
             LocationEntity(
                 id = 0,
-                title = "a train Station"
+                title = "a train Station",
+                label = "trainstation"
             ),
             LocationEntity(
                 id = 1,
-                title = "an italian restaurant"
+                title = "an italian restaurant",
+                label = "italianrestaurant"
             ),
             LocationEntity(
                 id = 2,
-                title = "a museum"
+                title = "a museum",
+                label = "museum"
             ),
             LocationEntity(
                 id = 3,
-                title = "a church"
+                title = "a church",
+                label = "church"
             ),
             LocationEntity(
                 id = 4,
-                title = "a supermarket"
+                title = "a supermarket",
+                label = "supermarket"
             ),
             LocationEntity(
                 id = 5,
-                title = "a Starbucks"
+                title = "a Starbucks",
+                label = "starbucks"
             ),
             LocationEntity(
                 id = 6,
-                title = "a McDonald's"
+                title = "a McDonald's",
+                label = "mcdonalds"
             ),
             LocationEntity(
                 id = 7,
-                title = "a cinema"
+                title = "a cinema",
+                label = "cinema"
             )
         )
 
